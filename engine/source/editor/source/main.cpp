@@ -18,6 +18,9 @@ int main(int argc, char** argv)
     params.m_root_folder      = pilot_root_folder;
     params.m_config_file_path = pilot_root_folder / "PilotEditor.ini";
 
+    std::cout << "Pilot root folder: " << pilot_root_folder << std::endl;
+    std::cout << "Pilot config file path: " << params.m_config_file_path << std::endl;
+
     Pilot::PublicSingleton<Pilot::PilotEngine>::getInstance().startEngine(params);
     Pilot::PublicSingleton<Pilot::PilotEngine>::getInstance().initialize();
 
